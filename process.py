@@ -7,6 +7,12 @@ def sales_reports(log_file): #naming a function
         day = line[0:3] #setting variable day equal to what day is in the line
         if day == "Mon": #prints the line if the day in the line is tuesday/monday
             print(line)
-
+def melons(log_file):
+    for line in log_file:
+        line = line.rstrip().split(' ')
+        quant = float(line[2])
+        if quant > 10:
+            print(line)
 
 sales_reports(log_file) #calls the function
+melons(log_file)
